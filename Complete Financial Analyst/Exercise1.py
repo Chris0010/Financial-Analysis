@@ -35,10 +35,15 @@ q10 = economic_analysis.loc[(economic_analysis['Subject Descriptor']
 # 11. Make a vertical bar chart of the answer of the previous question.
 # q11 = q10.plot.bar(x='Country', y=2022, title='Top 20 GDP per capita projected 2022')
 
-# 12.
+# 12. change the look
 q12 = q10.plot.bar(x='Country', y=2022,
                    title='Projected 2022 GDP Per Capita *',
                    legend=False, xlabel='COUNTRY',
                    ylabel='GDP PER CAPITA IN USD'
                    )
 q12.set_facecolor('k')
+
+# 13. N/A
+# 14. make it a pie chart
+q14 = q10.plot.pie(y=2022,
+                   title='Projected 2022 GDP Per Capita *', labels=q10.Country.values)
